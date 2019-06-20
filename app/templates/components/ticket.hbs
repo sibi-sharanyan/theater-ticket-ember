@@ -1,0 +1,72 @@
+<div class="bigcont">
+
+    <div class="ticketcontainer" id="printableArea">
+
+
+        <img class="qr" src={{qrcode}} alt="">
+
+        <table class="seattable">
+            <thead>
+                <th>Seat Id</th>
+                <th>Seat Type</th>
+                <th>Ticket Cost</th>
+            </thead>
+            <tbody>
+
+
+
+                {{#each arrayofseats as |seat| }}
+                <tr>
+                    <td class="tab"><span>{{seat.rowId}}</span><span>{{seat.columnId}}</span></td>
+                    <td class="tab">{{seat.type}}</td>
+                    <td class="tab">Rs.{{seat.cost}}</td>
+                </tr>
+
+
+                {{/each}}
+
+            </tbody>
+        </table>
+
+        <h1>Name: {{user.name}} </h1>
+        <h1>Email: {{user.email}} </h1>
+        <div class="ticket">Movie Name: {{movieobj.movieName}} </div>
+        <div class="ticket">Show Time: {{showobj.showTime}} </div>
+        <div class="ticket">Theater Name: {{showobj.theaterName}} </div>
+        <h1>Ticket Cost: Rs.{{cost}}</h1>
+
+
+    </div>
+    <input class="print" type="button" onclick="printDiv('printableArea')" value="Print Ticket" />
+    <button id="email" {{action "sendmail"}}> Send Email </button>
+    <button id="sms" {{action "sendsms"}}> Send SMS </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+
+
+
+
+
+</script>

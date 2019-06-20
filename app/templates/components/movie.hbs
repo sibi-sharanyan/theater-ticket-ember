@@ -1,0 +1,24 @@
+<div class="seat-container">
+
+    <h1>The Available Movies are as Follows!</h1>
+    <p class="lead">
+        Select a movie to view the Shows
+    </p>
+    <div class="movie-container">
+
+        {{#each arrayOfMovies as |dataobj|}}
+        <div class="movie">
+            <img class="movieimg" src={{dataobj.imgurl}} alt="" sizes="" srcset="">
+            <div class="moviename"> {{dataobj.movieName }}</div>
+            {{#link-to 'show' tagName='button' class="moviebtn" invokeAction=(action 'testAction'  dataobj.movieName ) }}View
+            Shows{{/link-to}}
+        </div>
+        {{/each}}
+
+    </div>
+
+
+
+
+
+</div>

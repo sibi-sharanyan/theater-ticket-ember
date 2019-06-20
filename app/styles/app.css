@@ -1,0 +1,305 @@
+body {
+  margin: 2rem;
+  font-size: 62.5%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.movieimg {
+  width: 10rem;
+  margin: 2rem;
+}
+
+.moviename {
+  font-size: 1.5rem;
+}
+
+.movie {
+  flex: 1;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.moviebtn {
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  background-color: darkblue;
+}
+
+.show {
+  background-color: black;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  color: white;
+  width: 50vw;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+/* .maincont {
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+} */
+
+.showbtn {
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: darkblue;
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+.movie-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  height: 70vh;
+}
+
+.show-container {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90vw;
+  height: 70vh;
+}
+
+.movie-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movieobj {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+  margin: 2rem;
+}
+
+.moviepic {
+  width: 9rem;
+}
+
+.showbtn {
+  margin-right: 5rem;
+}
+
+.seat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie {
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+.free {
+  background-color: green;
+}
+
+.taken {
+  background-color: red;
+}
+
+.seat {
+  border-radius: 2rem;
+  width: 3rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  flex-wrap: wrap;
+  height: 30vh;
+}
+
+.lead {
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+table {
+  width: 20rem;
+  height: 30rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.null {
+  font-weight: 900;
+  color: black;
+}
+
+td {
+  height: 1rem;
+  border-radius: 2rem;
+  vertical-align: center;
+  text-align: center;
+}
+
+.screen {
+  margin-left: 4rem;
+}
+
+.none {
+  visibility: hidden;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 10rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  position: absolute;
+  z-index: 1;
+  margin: 2rem;
+}
+
+td:hover .tooltiptext {
+  visibility: visible;
+}
+
+.selected {
+  background-color: yellow;
+  color: black;
+}
+
+.booknow {
+  width: 9rem;
+  padding: 1rem;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  position: absolute;
+  right: 10rem;
+  bottom: -10rem;
+  box-shadow: 5px 5px #88888846;
+}
+
+.seattable {
+  font-size: 1rem;
+  color: black;
+  height: 3rem;
+  width: 6rem;
+  margin-right: 8rem;
+}
+
+.tab {
+  height: 0.2rem;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.ticketcontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 30vw;
+  height: 90vh;
+  border: 0.5rem solid black;
+  box-shadow: 5px 5px #88888846;
+}
+
+.ticket {
+  font-size: 1rem;
+}
+
+.bigcont {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.print {
+  margin-left: 3rem;
+  padding: 1rem;
+  background-color: greenyellow;
+  color: black;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 900;
+  box-shadow: 5px 5px #88888846;
+}
+
+.qr {
+  width: 5rem;
+}
+
+.logincont {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginbtn {
+  background-color: purple;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  width: 9rem;
+  margin-top: 1rem;
+}
+
+.fval {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+#email,
+#sms {
+  margin-left: 3rem;
+  padding: 1rem;
+  background-color: greenyellow;
+  color: black;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 900;
+  box-shadow: 5px 5px #88888846;
+}

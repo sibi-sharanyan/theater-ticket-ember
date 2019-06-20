@@ -1,0 +1,88 @@
+<div class="seat-container">
+    {{#link-to 'show' tagName='button' class="showbtn" }}View Shows{{/link-to}}
+    <div class="movie-flex">
+
+        <img src={{movieobj.imgurl}} alt="" class="moviepic">
+        <div class="movieobj">
+            <div class=""> <strong> Movie Name: </strong> {{movieobj.movieName}}</div>
+            <div class=""> <strong> Director: </strong> {{movieobj.director}}</div>
+            <div class=""> <strong> Release Date: </strong> {{movieobj.releaseDate}}</div>
+            <div class=""> <strong> Run Time: </strong> {{movieobj.runTime}}</div>
+
+
+        </div>
+
+        <div class="movieobj">
+            <div class=""> <strong> Theater: </strong> {{theaterobj.theaterName}}</div>
+            <div class=""> <strong> Address: </strong> {{theaterobj.address}}</div>
+            <div class=""> <strong> State: </strong> {{theaterobj.state}}</div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="show">
+
+        <div class="showname"> {{dataobj.showName}}</div>
+        <div class="showname"> {{dataobj.showTime}}</div>
+        <div class="showname"> {{dataobj.theaterName}}</div>
+
+    </div>
+
+    <h1>Total Seats: {{tickets}} </h1>
+    <h1>Free Seats: {{freecnt}} </h1>
+    <h1>Taken Seats: {{takencnt}} </h1>
+
+
+
+
+
+
+
+    <table cellspacing="20">
+        <thead>
+        </thead>
+
+        <tbody>
+            {{#each columns as |col|}}
+            <tr>
+
+                {{#each col as |c|}}
+
+                <td class={{c.status}} id={{c.id}} onclick={{action "doneclick" c.id }}>
+
+                    <span class="tooltip"> {{c.seat}} </span>
+                    <span class="tooltiptext">
+                        <div class="">
+                            <strong>Seat Type: </strong> {{c.type}} <br>
+                            <strong>Ticket Cost: </strong> ₹{{c.cost}} <br>
+                            <strong>Reserved By: </strong> {{c.reservedBy}} <br>
+                        </div>
+                    </span>
+
+                </td>
+
+                {{/each}}
+
+
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+
+    <img src="images/screen1.png" class="screen" alt="">
+
+</div>
+
+
+
+
+
+
+{{#link-to 'ticket' tagName='button' class="booknow" }}Book Now!{{/link-to}}

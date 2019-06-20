@@ -1,0 +1,16 @@
+<div class="logincont">
+
+
+    <h1>Enter Details to Login! </h1>
+
+    <div class="fval"> UserName: </div> {{input  type="text"  class="fval"  value = username  }}
+    <div class="fval"> Email: </div> {{input  type="email"  class="fval"  value = email  }}
+    <div class="fval"> Password: </div> {{input  type="password"  class="fval"  value = password  }}
+    {{#link-to 'home' tagName='button' class="loginbtn" invokeAction=(action 'userlogin'  username email password ) }}
+    Login
+    {{/link-to}}
+
+
+
+
+</div>

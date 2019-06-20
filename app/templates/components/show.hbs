@@ -1,0 +1,39 @@
+<div class="show-container">
+
+
+
+
+
+
+    <div class="movie-flex">
+        {{#link-to 'home' tagName='button' class="showbtn" }}View Movies{{/link-to}}
+        <img src={{movieobj.imgurl}} alt="" class="moviepic">
+        <div class="movieobj">
+            <div class=""> <strong> Movie Name: </strong> {{movieobj.movieName}}</div>
+            <div class=""> <strong> Director: </strong> {{movieobj.director}}</div>
+            <div class=""> <strong> Release Date: </strong> {{movieobj.releaseDate}}</div>
+            <div class=""> <strong> Run Time: </strong> {{movieobj.runTime}}</div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    {{#each arrayOfShows as |dataobj|}}
+    <div class="show">
+        <div class="showname"> {{dataobj.showName}}</div>
+        <div class="showname"> {{dataobj.showTime}}</div>
+        <div class="showname"> {{dataobj.theaterName}}</div>
+        {{#link-to 'seat' tagName='button' class="showbtn" invokeAction=(action 'testAction'  dataobj.showid ) }}View
+        Tickets{{/link-to}}
+    </div>
+    {{/each}}
+
+
+
+</div>
